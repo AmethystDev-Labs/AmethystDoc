@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound, redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { DocsPage, DocsBody, DocsDescription, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
 import { getMDXComponents } from '@/mdx-components';
 import { source } from '@/lib/source';
@@ -11,11 +11,7 @@ interface Props {
 export default async function Page({ params }: Props) {
   const { slug } = await params;
 
-  if (!slug || slug.length === 0) {
-    redirect('/docs/api');
-  }
-
-  const page = source.getPage(slug);
+  const page = source.getPage(slug ?? []);
 
   if (!page) notFound();
 
@@ -40,14 +36,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
 
-  if (!slug || slug.length === 0) {
-    return {
-      title: 'Amethyst API Platform',
-      description: 'AmethystLabs API documentation',
-    };
-  }
-
-  const page = source.getPage(slug);
+  const page = source.getPage(slug ?? []);
 
   if (!page) notFound();
 
