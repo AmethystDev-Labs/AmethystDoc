@@ -13,7 +13,7 @@ export const linkItems: LinkItemType[] = [
   },
   {
     type: 'icon',
-    url: 'https://github.com/fuma-nama/fumadocs',
+    url: 'https://github.com/AmethystDev-Labs/AmethystDoc',
     label: 'github',
     text: 'Github',
     icon: (
