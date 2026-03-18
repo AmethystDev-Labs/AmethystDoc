@@ -1,0 +1,7 @@
+{
+  "title": "Argus",
+  "description": "Argus verification project",
+  "icon": "Shield",
+  "root": true,
+  "pages": ["index", "example"]
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Amethyst API Platform",
+  "description": "AmethystLabs API documentation",
+  "icon": "Server",
+  "root": true,
+  "pages": ["index"]
+}

@@ -1,0 +1,47 @@
+---
+title: 教程
+description: AmethystLabs 的使用教程和最佳实践
+---
+
+## 教程列表
+
+### MDX 基础
+
+学习如何使用 MDX 编写文档，包括：
+
+- 基本 Markdown 语法
+- 在 MDX 中使用 React 组件
+- 代码高亮
+- 标签页和折叠面板
+
+### 主题定制
+
+了解如何定制 AmethystLabs 的主题：
+
+```tsx
+import { createPreset } from 'fumadocs-ui/tailwind-plugin';
+
+export default {
+  presets: [
+    createPreset({
+      preset: 'ocean',
+    }),
+  ],
+};
+```
+
+### 搜索集成
+
+集成全文搜索功能，支持：
+
+- Fumadocs 内置搜索
+- Algolia Search
+- Orama Search
+
+### OpenAPI 文档
+
+从 OpenAPI 规范自动生成交互式 API 文档：
+
+```bash
+pnpm fumadocs-openapi generate ./openapi.yaml
+```

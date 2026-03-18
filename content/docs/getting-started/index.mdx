@@ -1,0 +1,54 @@
+---
+title: 入门指南
+description: 快速上手 AmethystLabs 文档平台
+---
+
+## 安装
+
+首先，使用以下命令创建一个新项目：
+
+```bash
+pnpm create fumadocs-app
+```
+
+## 目录结构
+
+```
+my-app/
+├── app/
+│   ├── (home)/
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── docs/
+│   │   ├── layout.tsx
+│   │   └── [[...slug]]/
+│   │       └── page.tsx
+│   └── layout.tsx
+├── content/
+│   └── docs/
+│       └── index.mdx
+├── lib/
+│   └── source.ts
+└── source.config.ts
+```
+
+## 创建你的第一篇文档
+
+在 `content/docs/` 目录下创建一个 MDX 文件：
+
+```mdx
+---
+title: 我的第一篇文档
+description: 这是一个示例文档
+---
+
+## 你好，世界！
+
+这是我的第一篇文档。
+```
+
+## 下一步
+
+<Cards>
+  <Card title="查看教程" href="/docs/guides" />
+</Cards>
